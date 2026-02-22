@@ -1,0 +1,22 @@
+{
+  "name": "kekse-security-bot",
+  "version": "1.0.0",
+  "description": "Discord Security & Support Bot für Kekse Clan",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Fabian Lehradt",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
