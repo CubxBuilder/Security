@@ -865,11 +865,17 @@ export async function violations(client) {
   });
 }
 client.once("ready", async () => {
-
-client.user.setPresence({
-    activities: [{ name: "DM to talk with moderators", type: 0 }],
-    status: "online"
-  });
+    await initInvitesStorage(client);
+    await initModerationStorage(client); 
+    await initViolationsStorage(client);
+    initModeration(client);
+    initVerification(client);
+    initInvites(client); 
+    initAuditLogs(client);
+    clear(client);
+    warning(client);
+    initModSend(client);
+    violations(client);
 })
 client.setMaxListeners(20);
 client.on("error", console.error)
