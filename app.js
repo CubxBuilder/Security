@@ -163,7 +163,7 @@ export function getVData(key) {
 export async function setVData(key, value) {
   if (!storageMessageV) return;
   dataV[key] = value;
-  const jsonString = JSON.stringify(data);
+  const jsonString = JSON.stringify(dataV);
   const embed = new EmbedBuilder()
     .setTitle("Storage")
     .setDescription("```json\n" + jsonString + "\n```");
